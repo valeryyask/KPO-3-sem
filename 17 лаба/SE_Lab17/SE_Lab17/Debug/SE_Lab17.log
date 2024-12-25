@@ -1,0 +1,64 @@
+﻿Сборка начата 03.10.2024 0:25:56.
+Уровень детализации журнала: Normal.     1>Проект "D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\SE_Lab17.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Создание "Debug\SE_Lab17.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\SE_Lab17.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Error.cpp FST.cpp In.cpp IT.cpp LexAnalysis.cpp Log.cpp LT.cpp Out.cpp Parm.cpp SE_Lab17.cpp
+         Error.cpp
+         FST.cpp
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         In.cpp
+         IT.cpp
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(78,32): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(98,32): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+         LexAnalysis.cpp
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LexAnalysis.cpp(80,17): warning C4305: =: усечение из "int" в "char"
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LexAnalysis.cpp(80,17): warning C4309: =: усечение константного значения
+         Log.cpp
+         LT.cpp
+         Out.cpp
+         Parm.cpp
+         SE_Lab17.cpp
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\SE_Lab17.cpp(19,9): warning C4102: Log: неиспользованная метка
+         Создание кода...
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LT.cpp(23): warning C4715: LT::LexTable::GetEntry: значение возвращается не при всех путях выполнения
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(159): warning C4715: IT::IdTable::GetEntry: значение возвращается не при всех путях выполнения
+     1>D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(195): warning C4172: возвращение адреса локальной или временной переменной : tempBuf
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\Debug\SE_Lab17.exe" /INCREMENTAL /ILK:"Debug\SE_Lab17.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\Debug\SE_Lab17.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\Debug\SE_Lab17.lib" /MACHINE:X86 Debug\Error.obj
+         Debug\FST.obj
+         Debug\In.obj
+         Debug\IT.obj
+         Debug\LexAnalysis.obj
+         Debug\Log.obj
+         Debug\LT.obj
+         Debug\Out.obj
+         Debug\Parm.obj
+         Debug\SE_Lab17.obj
+         SE_Lab17.vcxproj -> D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\Debug\SE_Lab17.exe
+       TlogCleanup:
+         Следующие элементы будут удалены из tlogs, так как они были удалены из проекта или сборки: D:\уник\кпо\лабораторные работы\lab17\SE_Lab17\SE_Lab17\Error.cpp.
+       FinalizeBuildStatus:
+         Файл "Debug\SE_Lab17.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\SE_Lab17.tlog\SE_Lab17.lastbuildstate".
+     1>Сборка проекта "D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\SE_Lab17.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\SE_Lab17.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\FST.cpp(62,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(78,32): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(98,32): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LexAnalysis.cpp(80,17): warning C4305: =: усечение из "int" в "char"
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LexAnalysis.cpp(80,17): warning C4309: =: усечение константного значения
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\SE_Lab17.cpp(19,9): warning C4102: Log: неиспользованная метка
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\LT.cpp(23): warning C4715: LT::LexTable::GetEntry: значение возвращается не при всех путях выполнения
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(159): warning C4715: IT::IdTable::GetEntry: значение возвращается не при всех путях выполнения
+         D:\d\уник\3 сем\кпо\17 лаба\SE_Lab17\SE_Lab17\IT.cpp(195): warning C4172: возвращение адреса локальной или временной переменной : tempBuf
+
+    Предупреждений: 9
+    Ошибок: 0
+
+Прошло времени 00:00:12.88
