@@ -1,0 +1,35 @@
+﻿Сборка начата 11.12.2024 19:40:47.
+Уровень детализации журнала: Normal.     1>Проект "D:\d\уник\3 сем\кпо\KPO_3term-main\KPO_3term-main\asm03\SE_Asm03\SE_Asm03\SE_Asm03.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Создание каталога "D:\d\уник\3 сем\кпо\KPO_3term-main\KPO_3term-main\asm03\SE_Asm03\x64\Debug\".
+       InitializeBuildStatus:
+         Обращение к "x64\Debug\SE_Asm03.tlog\unsuccessfulbuild".
+       _MASM:
+         Assembling asm03.asm...
+         cmd.exe /C "C:\Users\user\AppData\Local\Temp\tmp5f434db3223c45be98762a473dab4f15.cmd"
+         ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm03.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm03.asm
+     1>asm03.asm(1): error A2008: syntax error : .
+     1>asm03.asm(2): error A2008: syntax error : .
+     1>asm03.asm(8): error A2008: syntax error : .
+     1>asm03.asm(61): error A2008: syntax error : MessageBoxA
+     1>asm03.asm(67): error A2008: syntax error : main
+     1>asm03.asm(67): error A2088: END directive required at end of file
+     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm03.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm03.asm" с кодом "1".
+     1>Сборка проекта "D:\d\уник\3 сем\кпо\KPO_3term-main\KPO_3term-main\asm03\SE_Asm03\SE_Asm03\SE_Asm03.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "D:\d\уник\3 сем\кпо\KPO_3term-main\KPO_3term-main\asm03\SE_Asm03\SE_Asm03\SE_Asm03.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _MASM) -> 
+         asm03.asm(1): error A2008: syntax error : .
+         asm03.asm(2): error A2008: syntax error : .
+         asm03.asm(8): error A2008: syntax error : .
+         asm03.asm(61): error A2008: syntax error : MessageBoxA
+         asm03.asm(67): error A2008: syntax error : main
+         asm03.asm(67): error A2088: END directive required at end of file
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\asm03.obj" /Fl"x64\Debug\\" /W3 /errorReport:prompt  /Taasm03.asm" с кодом "1".
+
+    Предупреждений: 0
+    Ошибок: 7
+
+Прошло времени 00:00:01.86

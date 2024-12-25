@@ -1,0 +1,142 @@
+Microsoft (R) Macro Assembler (x64) Version 14.37.32824.0   12/11/24 19:40:48
+asm03.asm						     Page 1 - 1
+
+
+				.586
+asm03.asm(1) : error A2008:syntax error : .
+				.MODEL FLAT, STDCALL
+asm03.asm(2) : error A2008:syntax error : .
+				includelib kernel32.lib
+
+				ExitProcess PROTO : DWORD
+				MessageBoxA PROTO : DWORD, : DWORD, : DWORD, : DWORD
+
+				.stack 4096
+asm03.asm(8) : error A2008:syntax error : .
+
+ 00000000			.const
+
+ 00000000			.data
+ 00000000 10 20 30 40		myBytes BYTE 10h, 20h, 30h, 40h
+ 00000004 008A 003B 0044	myWords WORD 8Ah, 3Bh, 44h, 5Fh, 99h
+	   005F 0099
+ 0000000E 00000001		myDoubles DWORD 1, 2, 3, 4, 5, 6
+	   00000002
+	   00000003
+	   00000004
+	   00000005
+	   00000006
+ 00000026 0000000E R		myPointer DWORD myDoubles
+ 0000002A 00000001		myArr DWORD 1, 2, 3, 0, 5, 6, 7
+	   00000002
+	   00000003
+	   00000000
+	   00000005
+	   00000006
+	   00000007
+ 00000046 CF EE EB EE E6	SUCESS BYTE "Положительный", 0
+	   E8 F2 E5 EB FC
+	   ED FB E9 00
+ 00000054 CE F2 F0 E8 F6	FAIL BYTE "Отрицательный", 0
+	   E0 F2 E5 EB FC
+	   ED FB E9 00
+ 00000062 C1 E0 E1 E8 F7	STR1 BYTE "Бабич Виолетта, 2 курс, 7 группа", 0
+	   20 C2 E8 EE EB
+	   E5 F2 F2 E0 2C
+	   20 32 20 EA F3
+	   F0 F1 2C 20 37
+	   20 E3 F0 F3 EF
+	   EF E0 00
+ 00000083 20 00			STR2 BYTE " ", 0
+
+ 00000000			.code
+ 00000000			main PROC
+ 00000000  BE 00000004 R		mov ESI, OFFSET myWords
+ 00000005  67& 66| 8B 46		mov AX, [ESI + 4]			; AX = 68 (44)
+	   04
+ 0000000A  67& 66| 8B 5E		mov BX, [ESI + 2]			; BX = 59 (3B)
+	   02
+
+ 0000000F  33 C0			xor eax, eax
+ 00000011  BE 0000002A R		mov esi, offset myArr
+ 00000016  B9 00000007			mov ecx, lengthof myArr
+
+ 0000001B			CYCLE1:
+ 0000001B  67& 03 06			add eax, [esi]
+ 0000001E  83 C6 04			add esi, type myArr
+ 00000021  E2 F8			loop CYCLE1
+
+ 00000023  33 C0			xor eax, eax
+ 00000025  BB 00000001			mov ebx, 1
+ 0000002A  BE 0000002A R		mov esi, offset myArr
+ 0000002F  B9 00000007			mov ecx, lengthof myArr
+
+ 00000034			CYCLE2:
+ 00000034  67& 83 3E 00			cmp dword ptr [esi], 0
+ 00000038  74 07			je FOUND_ZERO
+ 0000003A  83 C6 04			add esi, type myArr
+ 0000003D  E2 F5			loop CYCLE2
+
+ 0000003F  EB 0C			jmp NOT_FOUND_ZERO
+
+ 00000041			FOUND_ZERO:
+ 00000041  BB 00000000			mov ebx, 0
+ 00000046  BF 00000046 R		mov edi, OFFSET SUCESS
+ 0000004B  EB 07			jmp SHOW_MESSAGE
+
+ 0000004D			NOT_FOUND_ZERO:
+ 0000004D  BF 00000054 R	    mov edi, OFFSET FAIL
+ 00000052  EB 00		    jmp SHOW_MESSAGE
+
+ 00000054			SHOW_MESSAGE:
+				    invoke MessageBoxA, 0, edi, offset STR1, 0
+asm03.asm(61) : error A2008:syntax error : MessageBoxA
+
+ 00000054  6A 00			push 0
+ 00000056  E8 00000000 E		call ExitProcess
+ 0000005B			main ENDP
+
+				end main
+Microsoft (R) Macro Assembler (x64) Version 14.37.32824.0   12/11/24 19:40:48
+asm03.asm						     Symbols 2 - 1
+
+
+
+
+Segments:
+
+                N a m e                  Length   Align   Class
+
+CONST  . . . . . . . . . . . . .	 00000000 16	  'CONST'	 ReadOnly
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+MessageBoxA  . . . . . . . . . .	P 	 00000000 Length= 00000000 External
+main . . . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000005B Public
+  CYCLE1 . . . . . . . . . . . .	L 	 0000001B _TEXT	
+  CYCLE2 . . . . . . . . . . . .	L 	 00000034 _TEXT	
+  FOUND_ZERO . . . . . . . . . .	L 	 00000041 _TEXT	
+  NOT_FOUND_ZERO . . . . . . . .	L 	 0000004D _TEXT	
+  SHOW_MESSAGE . . . . . . . . .	L 	 00000054 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+FAIL . . . . . . . . . . . . . .	Byte	 00000054 _DATA	
+STR1 . . . . . . . . . . . . . .	Byte	 00000062 _DATA	
+STR2 . . . . . . . . . . . . . .	Byte	 00000083 _DATA	
+SUCESS . . . . . . . . . . . . .	Byte	 00000046 _DATA	
+myArr  . . . . . . . . . . . . .	DWord	 0000002A _DATA	
+myBytes  . . . . . . . . . . . .	Byte	 00000000 _DATA	
+myDoubles  . . . . . . . . . . .	DWord	 0000000E _DATA	
+myPointer  . . . . . . . . . . .	DWord	 00000026 _DATA	
+myWords  . . . . . . . . . . . .	Word	 00000004 _DATA	
+
+	   0 Warnings
+	   6 Errors
